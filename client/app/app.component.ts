@@ -1,21 +1,21 @@
 import { Component } from '@angular/core';
 
 @Component({
-    selector: 'app-root',
-    templateUrl: './app.component.html',
-    styleUrls: ['./app.component.css']
-    // styles: [`
-    //     h1 {
-    //         color: dodgerblue
-    //     }`]
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+  // styles: [`
+  //   h1 {
+  //     color: dodgerblue
+  //   }`]
 })
 export class AppComponent {
-    title = 'Seasonal Jpop';
-    showSecret = false;
-    log = [];
+  title = 'Seasonal Jpop';
+  showSecret = false;
+  log = [];
 
-    onToggleDetails() {
-        this.showSecret = !this.showSecret;
-        this.log.push(new Date());
-    }
+  onToggleDetails() {
+    this.showSecret = !this.showSecret;
+    this.log.push(new Date());
+  }
 }
