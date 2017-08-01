@@ -1,19 +1,8 @@
 {
   "extends": "../tsconfig.json",
-  "compileOnSave": false,
   "compilerOptions": {
     "outDir": "../dist/server",
-    "baseUrl": "client",
-    "module": "commonjs",
-    "sourceMap": true,
-    "declaration": false,
-    "moduleResolution": "node",
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "target": "es5",
-    "lib": [
-      "es2016",
-      "dom"
-    ]
+    "baseUrl": "",
+    "module": "commonjs"
   }
 }
