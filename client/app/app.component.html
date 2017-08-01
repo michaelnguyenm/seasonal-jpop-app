@@ -1,31 +1,61 @@
-<h1>-</h1>
-<div class="container">
-    <div class="row">
-        <div class="col-xs-12">
-            <h1>Welcome to {{title}}!!</h1>
-            <h3>Inside app component</h3>
-            <!--
-            <hr>
-            <input type="text" [(ngModel)]="body">
-            <p>{{ body }}</p>
-            -->
-            <hr>
-            <app-servers></app-servers>
-        </div>
-        <div class="col-xs-12">
-            <button class="btn btn-primary"
-                (click)="onToggleDetails()">
-                Display details
-            </button>
-            <p *ngIf="showSecret">
-                Secret Password = tuna
-            </p>
-            <div
-                *ngFor="let logItem of log; let i = index"
-                [ngStyle]="{backgroundColor: i >= 4 ? 'blue' : 'transparent'}"
-                [ngClass]="{'white-text': i >= 4}">
-                {{ logItem }}
-            </div>
-        </div>
+<!-- Navigation bar-->
+<nav class="navbar navbar-fixed-top navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a
+        routerLink="/"
+        class="navbar-brand">
+        Seasonal J-pop
+      </a>
     </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li routerLinkActive="active">
+          <a routerLink="/">Home</a>
+        </li>
+        <li routerLinkActive="active">
+          <a routerLink="/about">About</a>
+        </li>
+       </ul>
+    </div>
+  </div>
+</nav>
+<!-- Display router -->
+<h1>-</h1>
+<router-outlet></router-outlet>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <h1>Welcome to {{title}}!!</h1>
+      <h3>Inside app component</h3>
+      <!--
+      <hr>
+      <input type="text" [(ngModel)]="body">
+      <p>{{ body }}</p>
+      -->
+      <hr>
+      <app-servers></app-servers>
+    </div>
+    <div class="col-xs-12">
+      <button class="btn btn-primary"
+        (click)="onToggleDetails()">
+        Display details
+      </button>
+      <p *ngIf="showSecret">
+        Secret Password = tuna
+      </p>
+      <div
+        *ngFor="let logItem of log; let i = index"
+        [ngStyle]="{backgroundColor: i >= 4 ? 'blue' : 'transparent'}"
+        [ngClass]="{'white-text': i >= 4}">
+        {{ logItem }}
+      </div>
+    </div>
+  </div>
 </div>
