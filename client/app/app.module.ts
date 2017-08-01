@@ -9,7 +9,7 @@ import { ServerComponent } from './server/server.component';
 import { ServersComponent } from './servers/servers.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
-import { NotfoundComponent } from './notfound/notfound.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +18,7 @@ import { NotfoundComponent } from './notfound/notfound.component';
     ServersComponent,
     HomeComponent,
     AboutComponent,
-    NotfoundComponent
+    NotFoundComponent
   ],
   imports: [
     RoutingModule,

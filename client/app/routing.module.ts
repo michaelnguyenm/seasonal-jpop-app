@@ -3,7 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
-import { NotfoundComponent } from './notfound/notfound.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+
 /*
 import { CatsComponent } from './cats/cats.component';
 import { AboutComponent } from './about/about.component';
@@ -26,7 +27,7 @@ const routes: Routes = [
   { path: 'account', component: AccountComponent, canActivate: [AuthGuardLogin] },
   { path: 'admin', component: AdminComponent, canActivate: [AuthGuardAdmin] },
   */
-  { path: 'notfound', component: NotfoundComponent },
+  { path: 'notfound', component: NotFoundComponent },
   { path: '**', redirectTo: '/notfound' },
 ];
 
