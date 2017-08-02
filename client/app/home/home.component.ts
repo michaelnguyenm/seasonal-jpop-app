@@ -16,10 +16,20 @@ export class HomeComponent implements OnInit {
   isLoading = true;
   isEditing = false;
 
-  constructor() { }
+  constructor(private animeService: AnimeService,
+              private http: Http,
+              public toast: ToastComponent) { }
 
   ngOnInit() {
-    this.isLoading = false;
+    this.getAllAnime();
+  }
+
+  getAllAnime() {
+    this.animeService.getAllAnime().subscribe(
+      data => this.animeList = data,
+      error => console.log(error),
+      () => this.isLoading = false
+    );
   }
 
 }

@@ -1,21 +1,21 @@
 import * as express from 'express';
 
-import CatCtrl from './controllers/cat';
-import Cat from './models/cat';
+import AnimeCtrl from './controllers/anime';
+import Anime from './models/anime';
 
 export default function setRoutes(app) {
 
   const router = express.Router();
 
-  const catCtrl = new CatCtrl();
+  const animeCtrl = new AnimeCtrl();
 
-  // Cats
-  router.route('/cats').get(catCtrl.getAll);
-  router.route('/cats/count').get(catCtrl.count);
-  router.route('/cat').post(catCtrl.insert);
-  router.route('/cat/:id').get(catCtrl.get);
-  router.route('/cat/:id').put(catCtrl.update);
-  router.route('/cat/:id').delete(catCtrl.delete);
+  // Anime
+  router.route('/anime_all').get(animeCtrl.getAll);
+  router.route('/anime/count').get(animeCtrl.count);
+  router.route('/anime').post(animeCtrl.insert);
+  router.route('/anime/:id').get(animeCtrl.get);
+  router.route('/anime/:id').put(animeCtrl.update);
+  router.route('/anime/:id').delete(animeCtrl.delete);
 
   // Apply the routes to our application with the prefix /api
   app.use('/api', router);

@@ -12,15 +12,15 @@ export class AnimeService {
 
   constructor(private http: Http) { }
 
-  getCats(): Observable<any> {
-    return this.http.get('/api/cats').map(res => res.json());
+  getAllAnime(): Observable<any> {
+    return this.http.get('/api/anime_all').map(res => res.json());
   }
 
-  countCats(): Observable<any> {
-    return this.http.get('/api/cats/count').map(res => res.json());
+  countAnime(): Observable<any> {
+    return this.http.get('/api/anime/count').map(res => res.json());
   }
 
-  getCat(cat): Observable<any> {
-    return this.http.get(`/api/cat/${cat._id}`).map(res => res.json());
+  getAnime(anime): Observable<any> {
+    return this.http.get(`/api/anime/${anime._id}`).map(res => res.json());
   }
 }
