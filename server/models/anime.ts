@@ -8,9 +8,9 @@ const animeSchema = new mongoose.Schema({
   airing_date: Date,
   music_list: [mongoose.Schema.Types.ObjectId],
   links: {
-    mal: "String",
-    adb: "String",
-    kitsu: "String"
+    mal: String,
+    adb: String,
+    kitsu: String
   }
 });
 

@@ -3,9 +3,9 @@
 <app-toast [message]="toast.message"></app-toast>
 
 <div class="container" *ngIf="!isLoading">
-  <p>
-    home works!
-  </p>
+  <div class="card">
+    <h4 class="card-header">There are {{ animeList.length }} anime in this list.</h4>
+  </div>
 </div>
 <div class="container">
   <p>
