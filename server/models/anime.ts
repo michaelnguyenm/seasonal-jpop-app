@@ -12,7 +12,7 @@ const animeSchema = new mongoose.Schema({
     adb: String,
     kitsu: String
   }
-});
+}, { collection: 'anime' });
 
 /*
 "title_jp": music_obj.title_jp,

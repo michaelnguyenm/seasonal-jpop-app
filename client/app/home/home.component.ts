@@ -14,7 +14,6 @@ export class HomeComponent implements OnInit {
   anime = {};
   animeList = [];
   isLoading = true;
-  isEditing = false;
 
   constructor(private animeService: AnimeService,
               private http: Http,

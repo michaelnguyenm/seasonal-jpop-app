@@ -23,6 +23,7 @@ const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', () => {
   console.log('Connected to MongoDB');
+  console.log('Using: ' + process.env.MONGODB_URI);
 
   setRoutes(app);
 
@@ -31,7 +32,7 @@ db.once('open', () => {
   });
 
   app.listen(app.get('port'), () => {
-    console.log('Angular Full Stack listening on port ' + app.get('port'));
+    console.log('seasonal-jpop-app listening on port ' + app.get('port'));
   });
 
 });
