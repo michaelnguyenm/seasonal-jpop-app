@@ -3,12 +3,18 @@
 <app-toast [message]="toast.message"></app-toast>
 
 <div class="container" *ngIf="!isLoading">
-  <div class="card">
-    <h4 class="card-header">There are {{ animeList.length }} anime in this list.</h4>
+  <div>
+    <h4>There are {{ animeList.length }} anime in this list.</h4>
   </div>
 </div>
-<div class="container">
-  <p>
-    Outside ngIf
-  </p>
+<div class="container" *ngIf="animeList.length === 0">
+  <p>There is no anime in the db.</p>
+</div>
+<div class="container" *ngIf="!(animeList.length === 0)">
+  <div class="col-sm-4" *ngFor="let anime of animeList">
+    <div class="panel panel-primary">
+      <div class="panel-heading">{{ anime.title_jp }}</div>
+      <div class="panel-body">Date: {{ anime.airing_date }}</div>
+    </div>
+  </div>
 </div>
