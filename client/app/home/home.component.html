@@ -11,10 +11,27 @@
   <p>There is no anime in the db.</p>
 </div>
 <div class="container" *ngIf="!(animeList.length === 0)">
-  <div class="col-sm-4" *ngFor="let anime of animeList">
+  <div class="col-sm-6" *ngFor="let anime of animeList">
     <div class="panel panel-primary">
       <div class="panel-heading">{{ anime.title_jp }}</div>
-      <div class="panel-body">Date: {{ anime.airing_date }}</div>
+      <div class="panel-body">
+        Eng title: {{ anime.title_en }}
+        <br>
+        Date: {{ anime.airing_date }}
+        <br>
+        <table class="table table-bordered table-striped">
+          <thead class="thead-default">
+            <tr>
+              <th>Music ({{ anime.music_list.length }})</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let music of anime.music_list">
+              <!-- <td>{{ getMusic(music).title_jp }}</td> -->
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
 </div>

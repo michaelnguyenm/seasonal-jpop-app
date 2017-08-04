@@ -11,6 +11,7 @@ import { AboutComponent } from './about/about.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 
 import { AnimeService } from './services/anime.service';
+import { MusicService } from './services/music.service';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,10 @@ import { AnimeService } from './services/anime.service';
     RoutingModule,
     SharedModule
   ],
-  providers: [AnimeService],
+  providers: [
+    AnimeService,
+    MusicService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

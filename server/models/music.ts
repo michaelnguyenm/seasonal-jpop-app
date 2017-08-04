@@ -13,6 +13,6 @@ const musicSchema = new mongoose.Schema({
   }
 }, { collection: 'music' });
 
-const Music = mongoose.model('Anime', musicSchema);
+const Music = mongoose.model('Music', musicSchema);
 
 export default Music;

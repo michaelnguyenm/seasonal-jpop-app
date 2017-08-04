@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Http } from '@angular/http';
 
 import { AnimeService } from '../services/anime.service';
+import { MusicService } from '../services/music.service';
 import { ToastComponent } from '../shared/toast/toast.component';
 
 @Component({
@@ -12,10 +13,13 @@ import { ToastComponent } from '../shared/toast/toast.component';
 export class HomeComponent implements OnInit {
 
   anime = {};
+  music;
   animeList = [];
   isLoading = true;
+  musicIsLoading = true;
 
   constructor(private animeService: AnimeService,
+              private musicService: MusicService,
               private http: Http,
               public toast: ToastComponent) { }
 
@@ -28,6 +32,15 @@ export class HomeComponent implements OnInit {
       data => this.animeList = data,
       error => console.log(error),
       () => this.isLoading = false
+    );
+  }
+
+  getMusic(music) {
+    this.musicIsLoading = true;
+    this.musicService.getMusic(music).subscribe(
+      data => this.music = data,
+      error => console.log(error),
+      () => this.musicIsLoading = false
     );
   }
 
