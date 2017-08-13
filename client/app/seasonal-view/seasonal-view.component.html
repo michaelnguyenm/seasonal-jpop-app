@@ -1,0 +1,17 @@
+<app-loading [condition]="isLoading"></app-loading>
+
+<app-toast [message]="toast.message"></app-toast>
+
+<div class="container" *ngIf="!isLoading">
+  <div>
+    <h4>There are {{ yearData.length }} in this list.</h4>
+    {{ seasonalData }}
+  </div>
+</div>
+<!-- <div class="container" *ngIf="animeList.length === 0">
+  <p>There are no seasons in the db.</p>
+</div>
+<div class="container" *ngIf="!(animeList.length === 0)">
+  <div class="col-sm-6" *ngFor="let anime of animeList">
+  </div>
+</div> -->

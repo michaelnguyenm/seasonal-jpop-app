@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
+import { SeasonalViewComponent } from './seasonal-view/seasonal-view.component';
 import { AboutComponent } from './about/about.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 
@@ -19,6 +20,7 @@ import { AuthGuardAdmin } from './services/auth-guard-admin.service';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
+  { path: '2017/1', component: SeasonalViewComponent },
   { path: 'about', component: AboutComponent },
   /*
   { path: 'register', component: RegisterComponent },

@@ -1,6 +1,6 @@
 import * as mongoose from 'mongoose';
 
-const seasonsSchema = new mongoose.Schema({
+const seasonSchema = new mongoose.Schema({
   year: Number,
   0: [mongoose.Schema.Types.ObjectId],
   1: [mongoose.Schema.Types.ObjectId],
@@ -8,6 +8,6 @@ const seasonsSchema = new mongoose.Schema({
   3: [mongoose.Schema.Types.ObjectId]
 }, { collection: 'seasons' });
 
-const Seasons = mongoose.model('Seasons', seasonsSchema);
+const Season = mongoose.model('Season', seasonSchema);
 
-export default Seasons;
+export default Season;

@@ -12,8 +12,6 @@ import { ToastComponent } from '../shared/toast/toast.component';
 })
 export class HomeComponent implements OnInit {
 
-  anime = {};
-  music;
   animeList = [];
   isLoading = true;
   musicIsLoading = true;
@@ -35,13 +33,12 @@ export class HomeComponent implements OnInit {
     );
   }
 
-  getMusic(music) {
-    this.musicIsLoading = true;
-    this.musicService.getMusic(music).subscribe(
-      data => this.music = data,
-      error => console.log(error),
-      () => this.musicIsLoading = false
-    );
-  }
-
+  // getMusic(music) {
+  //   this.musicIsLoading = true;
+  //   this.musicService.getMusic(music).subscribe(
+  //     data => this.music = data,
+  //     error => console.log(error),
+  //     () => this.musicIsLoading = false
+  //   );
+  // }
 }

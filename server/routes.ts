@@ -1,7 +1,7 @@
 import * as express from 'express';
 
-import SeasonsCtrl from './controllers/seasons';
-import Seasons from './models/seasons';
+import SeasonCtrl from './controllers/season';
+import Season from './models/season';
 
 import AnimeCtrl from './controllers/anime';
 import Anime from './models/anime';
@@ -13,11 +13,17 @@ export default function setRoutes(app) {
 
   const router = express.Router();
 
-  const seasonsCtrl = new SeasonsCtrl();
+  const seasonCtrl = new SeasonCtrl();
   const animeCtrl = new AnimeCtrl();
   const musicCtrl = new MusicCtrl();
 
   // Seasons
+  router.route('/seasons').get(seasonCtrl.getAll);
+  router.route('/seasons/count').get(seasonCtrl.count);
+  router.route('/seasons').post(seasonCtrl.insert);
+  router.route('/seasons/:yr/:season').get(seasonCtrl.getSeason);
+  router.route('/seasons/:id').put(seasonCtrl.update);
+  router.route('/seasons/:id').delete(seasonCtrl.delete);
 
   // Anime
   router.route('/anime_all').get(animeCtrl.getAll);

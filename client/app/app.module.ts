@@ -12,6 +12,11 @@ import { NotFoundComponent } from './not-found/not-found.component';
 
 import { AnimeService } from './services/anime.service';
 import { MusicService } from './services/music.service';
+import { SeasonService } from './services/season.service';
+
+import { SeasonalViewComponent } from './seasonal-view/seasonal-view.component';
+import { AnimeViewComponent } from './seasonal-view/anime-view/anime-view.component';
+import { MusicViewComponent } from './seasonal-view/anime-view/music-view/music-view.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +25,10 @@ import { MusicService } from './services/music.service';
     ServersComponent,
     HomeComponent,
     AboutComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    SeasonalViewComponent,
+    AnimeViewComponent,
+    MusicViewComponent
   ],
   imports: [
     RoutingModule,
@@ -28,7 +36,8 @@ import { MusicService } from './services/music.service';
   ],
   providers: [
     AnimeService,
-    MusicService
+    MusicService,
+    SeasonService
   ],
   bootstrap: [AppComponent]
 })
