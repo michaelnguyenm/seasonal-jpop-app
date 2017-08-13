@@ -12,8 +12,8 @@ import { ToastComponent } from '../shared/toast/toast.component';
 })
 export class SeasonalViewComponent implements OnInit {
 
-  yearData = [];
-  isLoading = true;
+  seasonalData = [];
+  isLoading: boolean = true;
   router: Router;
   currURL: string[];
 
@@ -27,7 +27,7 @@ export class SeasonalViewComponent implements OnInit {
 
   ngOnInit() {
     this.getSeason()
-    console.log(this.yearData);
+    // console.log(this.seasonalData);
     // console.log(this.yearData['1']);
     // console.log(this.yearData);
   }
@@ -35,7 +35,7 @@ export class SeasonalViewComponent implements OnInit {
   getSeason() {
     this.currURL = this.router.url.split('/');
     this.seasonService.getSeasonByValue(this.currURL).subscribe(
-      data => this.yearData = data,
+      data => this.seasonalData = data,
       error => console.log(error),
       () => this.isLoading = false
     );

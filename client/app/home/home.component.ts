@@ -14,7 +14,6 @@ export class HomeComponent implements OnInit {
 
   animeList = [];
   isLoading = true;
-  musicIsLoading = true;
 
   constructor(private animeService: AnimeService,
               private musicService: MusicService,
@@ -32,13 +31,4 @@ export class HomeComponent implements OnInit {
       () => this.isLoading = false
     );
   }
-
-  // getMusic(music) {
-  //   this.musicIsLoading = true;
-  //   this.musicService.getMusic(music).subscribe(
-  //     data => this.music = data,
-  //     error => console.log(error),
-  //     () => this.musicIsLoading = false
-  //   );
-  // }
 }
