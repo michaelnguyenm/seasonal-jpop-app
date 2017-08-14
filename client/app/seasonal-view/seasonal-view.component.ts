@@ -17,7 +17,6 @@ export class SeasonalViewComponent implements OnInit {
   router: Router;
   currURL: string[];
 
-
   constructor(private seasonService: SeasonService,
               private http: Http,
               private _router: Router,

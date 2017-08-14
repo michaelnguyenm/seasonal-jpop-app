@@ -5,7 +5,7 @@
 <div class="container" *ngIf="!isLoading">
   <div>
     <h4>There are {{ seasonalData.length }} anime in this list.</h4>
-    <h5>This page displays all the anime for <strong>/2017/1</strong> in this mongoDB.</h5>
+    <h5>This page displays all the anime for <strong>/{{currURL[1]}}/{{currURL[2]}}</strong> in this mongoDB.</h5>
     <div class="col-sm-6" *ngFor="let anime of seasonalData">
       <app-anime-view [animeId]=anime></app-anime-view>
     </div>
