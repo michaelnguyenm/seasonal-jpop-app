@@ -1,25 +1,23 @@
 <app-loading [condition]="isLoading"></app-loading>
 
 <div *ngIf="!isLoading">
-  <div class="panel panel-primary">
-    <div class="panel-heading">{{ animeData.title_jp }}</div>
-    <div class="panel-body">
-      Eng title: {{ animeData.title_en }}
-      <br>
-      Date: {{ animeData.airing_date }}
-      <br>
-      <table class="table table-bordered table-striped">
-        <thead class="thead-default">
-          <tr>
-            <th>Music ({{ animeData.music_list.length }})</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let music of animeData.music_list">
-            <app-music-view [musicId]=music></app-music-view>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+  <div class="card-title">{{ animeData.title_jp }}</div>
+  <div class="card-block">
+    Eng title: {{ animeData.title_en }}
+    <br>
+    Date: {{ animeData.airing_date }}
+    <br>
+    <table class="table table-bordered table-striped">
+      <thead class="thead-default">
+        <tr>
+          <th>Music ({{ animeData.music_list.length }})</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let music of animeData.music_list">
+          <app-music-view [musicId]=music></app-music-view>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </div>
