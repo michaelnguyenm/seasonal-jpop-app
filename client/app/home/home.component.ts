@@ -21,7 +21,7 @@ export class HomeComponent implements OnInit {
               public toast: ToastComponent) { }
 
   ngOnInit() {
-    this.getAllAnime();
+    //this.getAllAnime();
   }
 
   getAllAnime() {
