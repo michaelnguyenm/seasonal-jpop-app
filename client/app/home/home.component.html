@@ -6,6 +6,7 @@
   <div>
     <h4>There are {{ animeList.length }} anime in this list.</h4>
     <h5>This page displays <strong>all</strong> the anime in this mongoDB.</h5>
+    <h5>You can use https://app.michaelmnguyen.me/api/music/MUSIC_ID to get information on a song.</h5>
   </div>
 </div>
 <div class="container" *ngIf="animeList.length === 0">
@@ -29,7 +30,7 @@
             </thead>
             <tbody>
               <tr *ngFor="let music of anime.music_list">
-                <td>{{ music }}</td>
+                <td>Music ID: {{ music }}</td>
               </tr>
             </tbody>
           </table>
