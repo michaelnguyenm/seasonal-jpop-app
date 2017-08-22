@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "pm2 startOrReload ecosystem.json",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
