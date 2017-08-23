@@ -20,9 +20,7 @@ export class SeasonService {
     return this.http.get('/api/seasons/count').map(res => res.json());
   }
 
-  getSeasonByValue(season: String[]): Observable<any> {
-    // var test = this.http.get(`/api/seasons/${season[1]}`).map(res => res.json());
-    // return test;
+  getSeasonByValue(season: string[]): Observable<any> {
     return this.http.get(`/api/seasons/${season[1]}/${season[2]}`).map(res => res.json());
   }
 }

@@ -25,7 +25,10 @@ export class SeasonalViewComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.getSeason()
+    this.getSeason();
+    for(let anime in this.seasonalData) {
+      console.log(anime);
+    }
     // console.log(this.seasonalData);
     // console.log(this.yearData['1']);
     // console.log(this.yearData);

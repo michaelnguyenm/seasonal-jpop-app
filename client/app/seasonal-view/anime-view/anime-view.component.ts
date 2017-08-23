@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Http } from '@angular/http';
+import * as moment from 'moment';
 
 import { AnimeService } from '../../services/anime.service';
 
@@ -11,7 +12,8 @@ import { AnimeService } from '../../services/anime.service';
 export class AnimeViewComponent implements OnInit {
 
   isLoading: boolean = true;
-  animeData = {};
+  animeData: any;
+  animeDate: string;
   @Input() animeId: string;
 
   constructor(private animeService: AnimeService,
@@ -25,7 +27,7 @@ export class AnimeViewComponent implements OnInit {
     this.animeService.getAnimeById(this.animeId).subscribe(
       data => this.animeData = data,
       error => console.log(error),
-      () => this.isLoading = false
+      () => {this.animeDate = moment(this.animeData.airing_date).format("YYYY-MM-DD"); this.isLoading = false;}
     );
   }
 

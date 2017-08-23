@@ -24,7 +24,7 @@ export class AnimeService {
     return this.http.get(`/api/anime/${anime._id}`).map(res => res.json());
   }
 
-  getAnimeById(_id: String): Observable<any> {
+  getAnimeById(_id: string): Observable<any> {
     return this.http.get(`/api/anime/${_id}`).map(res => res.json());
   }
 }

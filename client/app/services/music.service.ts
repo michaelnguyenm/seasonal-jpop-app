@@ -20,7 +20,7 @@ export class MusicService {
     return this.http.get('/api/music/count').map(res => res.json());
   }
 
-  getMusicById(music: String): Observable<any> {
+  getMusicById(music: string): Observable<any> {
     return this.http.get(`/api/music/${music}`).map(res => res.json());
   }
 }

@@ -56,15 +56,6 @@ abstract class BaseCtrl {
       res.sendStatus(200);
     });
   };
-
-  // Get by year
-  getSeason = (req, res) => {
-    this.model.findOne({ year: req.params.yr }, (err, obj) => {
-      if (err) { return console.error(err); }
-      res.json(obj[req.params.season]);
-      // console.log(obj[req.params.season]);
-    });
-  };
 }
 
 export default BaseCtrl;
