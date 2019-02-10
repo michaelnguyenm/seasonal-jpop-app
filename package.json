@@ -11,8 +11,8 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "predev": "tsc -p server",
-    "dev": "concurrently \"mongod --config /etc/mongodb.conf\" \"ng serve -pc proxy.conf.json --open\" \"tsc -w -p server\" \"nodemon dist/server/app.js\"",
-    "prod": "concurrently \"mongod --config /etc/mongodb.conf\" \"ng build -aot -prod && tsc -p server && node dist/server/app.js\""
+    "dev": "concurrently \"mongod --config /etc/mongodb.conf --smallfiles\" \"ng serve -pc proxy.conf.json --open\" \"tsc -w -p server\" \"nodemon dist/server/app.js\"",
+    "prod": "concurrently \"mongod --config /etc/mongodb.conf --smallfiles\" \"ng build -aot -prod && tsc -p server && node dist/server/app.js\""
   },
   "private": true,
   "dependencies": {
@@ -42,7 +42,7 @@
     "zone.js": "^0.8.4"
   },
   "devDependencies": {
-    "@angular/cli": "1.1.0",
+    "@angular/cli": "1.2.4",
     "@angular/compiler-cli": "^4.0.0",
     "@angular/language-service": "^4.0.0",
     "@types/jasmine": "2.5.45",
