@@ -1,6 +1,6 @@
 # SeasonalJpopApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.4. A sample of this application can be found on an [AWS EC2 instance I have created](ec2-52-25-78-67.us-west-2.compute.amazonaws.com).
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.4. A sample of this application can be found on an [AWS EC2 instance I have created](http://ec2-52-25-78-67.us-west-2.compute.amazonaws.com).
 
 ## Development server
 
